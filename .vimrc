@@ -110,20 +110,20 @@ let g:mapleader = "\\"
 " Fast saving
 nmap <leader>w :w!<cr>
 map <leader>e :e! ~/.vimrc<cr>
+map <leader>q :q!<cr>
 
 " Tabs
 map <leader>tn :tabnew<cr>
 map <leader>te :tabedit 
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove 
+map <leader>n  <Esc>gt 
 
 " Change dir
 map <leader>cd :cd %:p:h<cr>
 
 " Cope
 map <leader>cc :botright cope<cr>
-map <leader>n :cn<cr>
-map <leader>p :cp<cr>
 
 
 " Smart way to move btw. windows
@@ -147,6 +147,12 @@ map <C-K>	  0dd
 cnoremap <C-P> <Up>
 cnoremap <C-N> <Down>
 
+map <C-V> <Esc>:vsp<cr><C-l>
+map <C-H> <Esc>:sp<cr><C-j>
+
+" cnoremap <C-S> <Esc>:w<cr>
+" map <C-Q> <Esc><Esc>:qall! <cr>
+
 map 0 ^
 
 
@@ -168,12 +174,11 @@ map <leader>pp <Esc>0ipackage ;<Esc>hi
 " JavaScript Related
 map <leader>jl <Esc>0iconsole.log( );<Esc>hhi
 
-
-
-
 " Paste and cd
 " map <leader>pp :setlocal paste!<cr>
 map <leader>bb :cd ..<cr>
+inoremap <C-n> <C-x><C-o>
+
 
 
 
@@ -181,8 +186,9 @@ map <leader>bb :cd ..<cr>
 " => Omni complete functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-
-" FIXME: Omnicomplete for stuff
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType php set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType rb set omnifunc=rubycomplete#Complete
 
 
 
