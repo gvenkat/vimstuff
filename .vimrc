@@ -149,6 +149,8 @@ cnoremap <C-N> <Down>
 
 map <C-V> <Esc>:vsp<cr><C-l>
 map <C-H> <Esc>:sp<cr><C-j>
+map <C-M> <Esc>:NERDTree<cr>
+
 
 " cnoremap <C-S> <Esc>:w<cr>
 " map <C-Q> <Esc><Esc>:qall! <cr>
